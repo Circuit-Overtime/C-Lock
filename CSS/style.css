@@ -1,0 +1,265 @@
+:root
+{
+  --background : "";
+}
+body {
+
+  
+  
+  background-size: cover;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.backgrounImg
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  
+}
+.backgrounImg img
+{
+  position: relative;
+  top: 0;
+  height: inherit;
+  width: inherit;
+  background-size: cover;
+}
+body::before
+
+{
+  background: linear-gradient(45deg, rgb(0, 60, 255), #00ff73 50%, #00ff80 50%, #00ae09);
+  content: '';
+ 
+}
+body::after
+{
+  content: '';
+  background: linear-gradient(160deg, #ff9100, #ff4400 50%, transparent 50%, transparent);
+}
+.pomodoro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 500px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  display: none;
+}
+.session_length_heading
+{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: aliceblue;
+  pointer-events: none;
+
+}
+
+.break_length_heading
+{
+  text-transform: uppercase;
+  font-weight: 700;
+  color: aliceblue;
+  pointer-events: none;
+
+}
+.session
+
+{
+
+  font-size: 24px;
+  justify-content: center;
+}
+p {
+  text-align: center;
+}
+
+.flip-clock-wrapper {
+  max-width: 460px;
+  margin: 3em auto 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.col-md-2 {
+  display: flex;
+  justify-content: center;
+  height: 34px;
+  align-items: center;
+  color: #ffc;
+  font-size: 20px;
+  font-family: "calibri";
+  font-weight: 700;
+  position: relative;
+  top: 5px;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+}
+#start, #stop, #clear, #stop_over
+{
+  text-transform: uppercase;
+  color: #ffc;
+  font-weight: 700;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+}
+
+#start:hover, #stop:hover, #clear:hover, #stop_over:hover
+{
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 700;
+  background-color: #ffc;
+}
+
+
+.clock {
+  margin-top: 30px;
+}
+.flip-clock-label
+{
+  font-weight: 700;
+  color: azure;
+}
+.container {
+  width: 500px;
+}
+
+.middle {
+  display: inline-block;
+}
+
+#btns {
+  display: flex;
+  justify-content: center;
+}
+
+#stop {
+  margin-left: 10px;
+  margin-right: 10px;
+  animation: shake 0.2s linear infinite;
+  animation-play-state: paused;
+}
+
+#start
+{
+  animation: shake 0.2s linear infinite;
+  animation-play-state: paused;
+}
+#stop_over
+{
+
+  animation: shake 0.2s linear infinite;
+  animation-play-state: paused;
+  /* display: block; */
+  margin-right: 50px;
+  margin-left: 45px;
+  width: 95px;
+  font-size: 17px;
+  text-align: center;
+  justify-content: center;
+  /* display: none; */
+  padding-left: 12px;
+  padding-top: 12px;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+  z-index: -2;
+}
+.btn:focus
+{
+  background-color: #333;
+  color: #ffc;
+}
+@keyframes shake {
+  0% { -webkit-transform: translate(2px, 0); }
+	50% { -webkit-transform: translate(-2px, 0); }
+	100% { -webkit-transform: translate(2px, 0); }
+}
+
+.btn {
+  background-color: #333333;
+  color: #CCCCCC;
+}
+
+#sessInc, #sessDec{
+  font-weight: bold;
+  font-size: 21px;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+
+}
+.col-md-6
+
+{
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#sessInc:hover, #sessDec:hover {
+  font-weight: bold;
+  font-size: 21px;
+  outline: none;
+  border: none;
+  background-color: #ffc;
+  
+}
+
+
+#stats {
+  background-color: #333333;
+  width: 220px;
+  height: 70px;
+  border-radius: 10px;
+  color: #CCCCCC;
+  font-size: 24px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+
+}
+
+#statRow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+  body
+  {
+    overflow: hidden;
+  }
+  .pomodoro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(01);
+    width: 500px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    /* display: none; */
+  }
+}
+
+
